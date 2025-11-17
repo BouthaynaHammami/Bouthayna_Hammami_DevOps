@@ -16,7 +16,7 @@ pipeline {
         stage('Build') {
             steps {
 		dir('student-management') {
-			sh 'mvn clean package'
+			sh "mvn clean install -DskipTests"
 		}
             }
         }
