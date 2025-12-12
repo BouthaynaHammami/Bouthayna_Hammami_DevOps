@@ -8,7 +8,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /home/bouth/mysql-data
+    path: "/data/mysql"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -42,7 +42,7 @@ spec:
             - name: MYSQL_ROOT_PASSWORD
               value: root123
             - name: MYSQL_DATABASE
-              value: studentdb
+              value: springdb
           ports:
             - containerPort: 3306
           volumeMounts:
